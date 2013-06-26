@@ -22,5 +22,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_development_dependency "mongo"
   spec.add_development_dependency "bson_ext"
-  spec.add_development_dependency "heroku"
+  spec.add_development_dependency "debugger"
 end

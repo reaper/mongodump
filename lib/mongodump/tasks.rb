@@ -1,4 +1,4 @@
-if Rails.version >= '3'
+if defined?(Rails) && Rails.version >= '3'
   module Mongodump
     class Railtie < Rails::Railtie
       rake_tasks do
@@ -7,6 +7,5 @@ if Rails.version >= '3'
     end
   end
 else
-  require 'rake'
   Dir[File.join(File.dirname(__FILE__), 'tasks/**/*.rake')].each { |file| load file }
 end

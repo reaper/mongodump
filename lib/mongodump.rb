@@ -1,5 +1,8 @@
-require 'heroku/command/config'
-require "mongodump/version"
+require 'mongodump/heroku'
+require 'mongodump/db/base'
+require 'mongodump/db/mongolab'
+require 'debugger'
+require 'rake'
 
 if defined?(Rails)
   # Require rake tasks
