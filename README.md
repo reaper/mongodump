@@ -4,17 +4,13 @@ Mongodump use heroku toolbelt and mongo binaries to fetch mongo databases from h
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Mongodump works with Rails 3.2. Add this line to your application's Gemfile:
 
     gem 'mongodump'
 
 And then execute:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install mongodump
+    $ bundle install
 
 ## Usage
 
