@@ -1,6 +1,6 @@
 # Mongodump
 
-Mongodump use heroku toolbelt and mongo binaries to fetch mongo databases from heroku databases platforms and restore it in your local database.
+Mongodump use heroku toolbelt and mongo binaries to fetch mongo databases from heroku databases platforms and restore them in your local database.
 
 ## Installation
 
