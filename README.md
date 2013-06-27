@@ -18,8 +18,7 @@ And then execute:
     
 ## Limitations
 
-For the moment, mongodump only simply works with MongoLab databases.
-Development is in progress to make it compatible with MongoHQ.
+For the moment, mongodump only works with MongoLab databases. For the moment, the plugin is young and quite simple, it will be improved in the next months.
 
 ## TODO
 
