@@ -1,9 +1,9 @@
 module Mongodump
   module Heroku
-    HEROKU_CONFIG_COMMAND = "heroku config --shell"
+    @@heroku_config = "heroku config --shell"
 
     def self.parse_config
-      config = `#{HEROKU_CONFIG_COMMAND}`
+      config = `#{@@heroku_config}`
 
       hash = Hash.new
       for line in config.split("\n")

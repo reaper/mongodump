@@ -1,6 +1,6 @@
 module Mongodump
   module DB
-    class Mongolab < Mongodump::DB::Base
+    class Mongolab < Base
       def parse
         splitted_uri = @uri.scan(/^(.*):\/\/(.*?):(.*?)@(.*?):(\d*)\/(.*?)$/i).flatten
 

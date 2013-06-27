@@ -1,5 +1,7 @@
+require 'mongodump'
+
 desc 'Mongodump main rake task'
-task :mongodump do
+task :mongodump => :environment do
   include Enumerable
 
   # Nil object to store object instance outside the conditional block
@@ -13,13 +15,8 @@ task :mongodump do
     db_object = Mongodump::DB::Mongolab.new(uri)
   end
 
-  if db_object.has_all_attributes?
-    puts db_object.uri
-    puts db_object.protocol
-    puts db_object.username
-    puts db_object.password
-    puts db_object.hostname
-    puts db_object.port
-    puts db_object.appname
+  if db_object && db_object.has_all_attributes?
+    path = Mongodump::Dump.process(db_object)
+    Mongodump::Restore.process(path)
   end
 end
