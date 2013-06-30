@@ -5,7 +5,6 @@ require 'mongodump/db/base'
 require 'mongodump/db/mongolab'
 require 'mongodump/display'
 
-require 'debugger'
 require 'rake'
 require 'colorize'
 
