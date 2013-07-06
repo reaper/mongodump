@@ -3,7 +3,7 @@ module Mongodump
     @@heroku_config = "heroku config --shell"
 
     def self.parse_config
-      config = `#{@@heroku_config}`
+      config = Bundler.with_clean_env { `#{@@heroku_config}` }
 
       hash = Hash.new
       for line in config.split("\n")
